@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>Dischi</title>
+</head>
+<body >
+    <div id="app">
+    <header></header>
+    <main>
+        <div class="card-section">
+            <div class=" ct-card " v-for="(album, index) in albums">
+                <div class="image-container ">
+                    <img :src="album.poster" :alt="album.name + album.author + album.year + album.title ">
+                </div>
+                <div class="text-container">
+                    <h2>{{album.title}}</h2>
+                    <p>{{album.author}}</p>
+                    <p>{{album.year}}</p>
+                </div>
+            
+            </div>
+
+        </div>
+
+       
+
+
+    </main>
+    </div>
+    
+</body>
+</html>
