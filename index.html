@@ -14,10 +14,16 @@
 </head>
 <body >
     <div id="app">
-    <header></header>
+    <header>
+        <select name="" id="" :v-model="selected" @change="onChange($event)">
+            <option value="All" selected>All</option>
+            <option v-for="(element,index) in albumGenres" :key="index + element" :value="element">{{element}}</option>
+        </select>
+    </header>
     <main>
+        
         <div class="card-section">
-            <div class=" ct-card " v-for="(album, index) in albums">
+            <div class=" ct-card " v-for="(album, index) in filteredList">
                 <div class="image-container ">
                     <img :src="album.poster" :alt="album.name + album.author + album.year + album.title ">
                 </div>
