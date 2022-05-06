@@ -20,7 +20,7 @@ const app = new Vue({
 
         
         loadData() {
-            axios.get("http://localhost/php-ajax-dischi/data.php").then((result) => {
+            axios.get("http://localhost/php-ajax-dischi/dataApi.php").then((result) => {
                 if (result.status === 200) {
                     this.albums = result.data;
                     this.albums.forEach(element => {
